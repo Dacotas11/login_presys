@@ -15,9 +15,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth < 600) {
+        if (constraints.maxWidth < 700) {
           return LoginPageMobile();
-        } else if (constraints.maxWidth < 900) {
+        } else if (constraints.maxWidth < 900 && constraints.maxHeight < 600) {
           return LoginPageTablet();
         } else {
           return LoginPageDesktop();
